@@ -1,0 +1,58 @@
+
+
+/* level-graph */
+svg.level-graph {
+  user-select: none;
+}
+svg.grid {
+  background: linear-gradient(
+      90deg,
+      transparent 10px,
+      #ccc 11px,
+      transparent 11px
+    ),
+    linear-gradient(0deg, transparent 10px, #ccc 11px, transparent 11px);
+  background-size: 20px 20px;
+}
+.toolbar {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  z-index: 10;
+  box-sizing: border-box;
+  width: 40px;
+  border: 1px solid #ddd;
+  box-shadow: 4px 2px 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.toolbar .toolbar-button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+.toolbar .toolbar-button + .toolbar-button {
+  border-top: 1px dashed #ddd;
+}
+.toolbar .toolbar-button:hover {
+  background-color: lightblue;
+}
+/*text styles */
+.level-group .node text {
+  pointer-events: none;
+}
+.level-group .node text.node-title {
+  font-size: 14px;
+  font-weight: bold;
+  fill: #333;
+}
+.level-group .node text.node-desc {
+  font-size: 12px;
+  fill: #666;
+}
+.links-group > path.highlight {
+  stroke: #009999;
+  stroke-width: 2;
+}
