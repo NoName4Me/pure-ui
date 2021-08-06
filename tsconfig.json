@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+      "allowSyntheticDefaultImports": true,
+      "module": "esnext",
+      "target": "es5",
+      "lib": ["es2015", "dom"],
+      "types": ["node", "jest"],
+      "jsx": "react",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "allowJs": false,
+      "strict": true,
+      "declaration": true,
+      "esModuleInterop": true,
+      "outDir": "dist/"
+  },
+  "exclude": ["src/**/__tests__/**", "src/**/__mocks__/**", "*/stories.ts"]
+}
