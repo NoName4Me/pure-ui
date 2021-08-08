@@ -11,7 +11,7 @@ const defaultArgs = {
   initialScale: 1
 };
 export default {
-  title: 'Example/FancyTree',
+  title: 'FancyTree',
   argTypes: {
     showToolbar: { control: 'boolean' },
     backgroundColor: { control: 'color' },
