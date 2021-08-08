@@ -1,0 +1,81 @@
+#fancy-tree {
+  user-select: none;
+  &.grid {
+    background: linear-gradient(
+        90deg,
+        transparent 10px,
+        #ccc 11px,
+        transparent 11px
+      ),
+      linear-gradient(0deg, transparent 10px, #ccc 11px, transparent 11px);
+    background-size: 20px 20px;
+  }
+  
+  /*text styles */
+  .nodeup,
+  .node,
+  .nodedown {
+    text {
+      pointer-events: none;
+    }
+    text.node-title {
+      font-size: 14px;
+      font-weight: bold;
+      fill: #333;
+    }
+    text.node-desc {
+      font-size: 12px;
+      fill: #999;
+    }
+    .node-link-label {
+      font-size: 12px;
+    }
+  }
+
+  & + .toolbar {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    z-index: 10;
+    box-sizing: border-box;
+    width: 40px;
+    border: 1px solid #ddd;
+    box-shadow: 4px 2px 8px 0 rgba(0, 0, 0, 0.1);
+    background-color: white;
+    .toolbar-button {
+      width: 40px;
+      height: 40px;
+      color: #333;
+      cursor: pointer;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+    }
+    .toolbar-button + .toolbar-button {
+      border-top: 1px dashed #ccc;
+    }
+    .toolbar-button:hover {
+      background-color: #cce6ff;
+    }
+  }
+
+  //
+  .hide-node {
+    display: none;
+  }
+  
+}
+
+.fancy-tree-icon-loading {
+  stroke-dashoffset: 42.39;
+    animation: fancy-tree-animation-loading 1s infinite;
+  }
+
+  @keyframes fancy-tree-animation-loading {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: 18 * 3.14;
+    }
+  }

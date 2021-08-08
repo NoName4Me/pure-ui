@@ -1,0 +1,61 @@
+[
+  {
+    "level": 0,
+    "nodes": [
+      {
+        "id": "level0-0",
+        "bizData": {
+          "title": "第1层第1个节点",
+          "desc": "详细的描述文字"
+        },
+        "links": ["level1-0", "level1-1"]
+      },
+      {
+        "id": "level0-1",
+        "bizData": {
+          "title": "第1层第2个节点",
+          "desc": "详细的描述文字"
+        },
+        "links": ["level1-1"]
+      },
+      {
+        "id": "level0-2",
+        "bizData": {
+          "title": "第1层第3个节点",
+          "desc": "详细的描述文字"
+        },
+        "links": ["level1-2"]
+      },
+      {
+        "id": "level0-3",
+        "bizData": {
+          "title": "第1层第4个节点",
+          "desc": "详细的描述文字"
+        },
+        "links": ["level1-2"]
+      },
+      { "id": "level0-4", "links": ["level1-3"] }
+    ]
+  },
+  {
+    "level": 1,
+    "nodes": [
+      { "id": "level1-0", "links": ["level2-1", "level2-2"] },
+      { "id": "level1-1", "links": ["level2-1"] },
+      { "id": "level1-2", "links": ["level2-2"] },
+      { "id": "level1-3", "links": ["level2-2"] }
+    ]
+  },
+  {
+    "level": 2,
+    "nodes": [
+      { "id": "level2-0", "links": ["level3-0"] },
+      { "id": "level2-1", "links": ["level3-0"] },
+      { "id": "level2-2", "links": ["level3-0"] }
+    ]
+  },
+  {
+    "level": 3,
+    "nodes": [{ "id": "level3-0" }]
+  }
+]

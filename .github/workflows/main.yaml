@@ -1,0 +1,34 @@
+  
+name: Build and Deploy
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        with:
+          persist-credentials: false
+
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          yarn
+          CI=false yarn build
+          yarn build-storybook
+      # github pacakge is shit
+      # - name: Publish Github pacakges 🎉
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: '12.x'
+      #     registry-url: 'https://npm.pkg.github.com'
+      # - run: CI=false npm run release
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish npm pacakges 🎉
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: CI=false npm run release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}

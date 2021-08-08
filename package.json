@@ -4,30 +4,40 @@
   "description": "",
   "main": "index.js",
   "module": "index.es.js",
-  "browser": "index.iff.js",
+  "browser": "index.iife.js",
   "scripts": {
     "build": "rollup --config rollup.config.js",
-    "doc": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "watch": "cross-env ENV=dev rollup --config rollup.config.js --watch",
+    "dev": "start-storybook -p 6006",
+    "doc": "build-storybook -o docs/",
+    "release": "cp package.json dist/ && npm publish dist"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jonge Den",
+  "license": "MIT",
   "peerDependencies": {
-    "d3v4": "^4.2.2"
+    "d3": "^4.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-image": "^2.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-typescript": "^8.2.5",
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addon-essentials": "^6.3.6",
     "@storybook/addon-links": "^6.3.6",
     "@storybook/html": "^6.3.6",
     "@storybook/preset-scss": "^1.0.3",
+    "@svgr/webpack": "^5.5.0",
+    "@types/d3": "^4.13.12",
     "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
     "css-loader": "5.2.6",
-    "d3v4": "^4.2.2",
+    "d3": "^4.13.0",
+    "rollup": "^2.56.0",
     "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-styles": "^3.14.1",
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.36.0",
     "sass-loader": "10",
@@ -35,6 +45,6 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "rollup": "^2.56.0"
+    "merge": "^2.1.1"
   }
 }

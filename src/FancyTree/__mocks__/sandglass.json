@@ -1,0 +1,144 @@
+{
+  "children": [
+    {
+      "bizData": {
+        "title": "这个公司名字超级超级超级长哦"
+      }
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "bizData": {
+                    "title": "小小公司"
+                  }
+                }
+              ],
+              "bizData": {
+                "title": "小小公司"
+              }
+            }
+          ],
+          "bizData": {
+            "title": "小公司"
+          }
+        },
+        {
+          "bizData": {
+            "title": "小公司2"
+          }
+        }
+      ],
+      "bizData": {
+        "title": "打酱油的公司",
+        "desc": "快黄了",
+        "linkLabelRight": "50%"
+      }
+    },
+    {
+      "children": [
+        {
+          "bizData": {
+            "title": "小公司"
+          }
+        },
+        {
+          "bizData": {
+            "title": "小公司2"
+          }
+        }
+      ],
+      "bizData": {
+        "title": "拼刀刀2333",
+        "linkLabelRight": "30%"
+      }
+    },
+    {
+      "bizData": {
+        "title": "拼刀刀2222",
+        "linkLabelRight": "20%"
+      }
+    }
+  ],
+  "parents": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "bizData": {
+                "title": "123",
+                "desc": "780万元"
+              }
+            }
+          ],
+          "bizData": {
+            "title": "发发委"
+          }
+        },
+        {
+          "children": [
+            {
+              "bizData": {
+                "desc": "780万元",
+                "title": "123"
+              }
+            }
+          ],
+          "bizData": {
+            "title": "123发发委"
+          }
+        }
+      ],
+      "bizData": {
+        "title": "大公司"
+      }
+    },
+    {
+      "money": "780万元",
+      "children": [
+        {
+          "money": "780万元",
+          "bizData": {
+            "title": "发哈哈"
+          }
+        }
+      ],
+      "bizData": {
+        "title": "多多网"
+      }
+    },
+    {
+      "money": "780万元",
+      "children": [
+        {
+          "money": "780万元",
+          "bizData": {
+            "title": "王林"
+          }
+        },
+        {
+          "money": "780万元",
+          "bizData": {
+            "title": "张峰"
+          }
+        },
+        {
+          "money": "780万元",
+          "bizData": {
+            "title": "侯明"
+          }
+        }
+      ],
+      "bizData": {
+        "title": "投了个资的"
+      }
+    }
+  ],
+  "bizData": {
+    "title": "超级大公司"
+  }
+}
