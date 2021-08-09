@@ -30,7 +30,7 @@ export default [
       {
         file: `dist/${pkg.browser}`,
         format: "iife",
-        name: "PureUI", // the global which can be used in a browser
+        name: "FancyTree", // the global which can be used in a browser
       },
     ],
     plugins,

@@ -59,7 +59,6 @@ interface NodeLocation {
 interface DefaultBizData {
   title: string;
   desc: string;
-  hoverCallback?: (event: MouseEvent, node: HierarchyPointNode) => {};
   linkLabelRight?: string;
 }
 interface DataNode extends NodeLocation {
@@ -235,8 +234,8 @@ function createSandglassTree(customConfig: Config) {
       )
       .on('mouseenter', (d, i, g) => {
         const event = d3.event;
-        if (d.data.bizData?.hoverCallback) {
-          d.data._destroyHoverInfo = d.data.bizData.hoverCallback(event, d);
+        if (d.data.hoverCallback) {
+          d.data._destroyHoverInfo = d.data.hoverCallback(event, d);
         }
         if (!d.depth) return;
         // shoe up/down

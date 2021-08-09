@@ -65,17 +65,3 @@
   }
   
 }
-
-.fancy-tree-icon-loading {
-  stroke-dashoffset: 42.39;
-    animation: fancy-tree-animation-loading 1s infinite;
-  }
-
-  @keyframes fancy-tree-animation-loading {
-    from {
-      stroke-dashoffset: 0;
-    }
-    to {
-      stroke-dashoffset: 18 * 3.14;
-    }
-  }

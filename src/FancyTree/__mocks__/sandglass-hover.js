@@ -3,26 +3,26 @@ export default {
     {
       bizData: {
         title: '这个公司名字超级超级超级长哦',
-        hoverCallback(event, node) {
-          const rect = event.target.getBoundingClientRect();
-          const div = document.createElement('div');
-          div.style.position = 'fixed';
-          div.style.left = rect.right + 'px';
-          div.style.top = rect.bottom + 'px';
-          div.style.width = '320px';
-          div.style.height = '200px';
-          div.style.border = '1px solid gray';
-          div.style.zIndex = '9';
-          div.style.background = '#fff';
-          div.innerHTML = `
-          <div>
-            <h3>悬浮时自定义渲染一个弹层</h3>
-            <h4>${node.data.bizData.title}</h4>
-            <p>${node.data.bizData.desc||''}</p>
-          </div>`;
-          document.body.append(div);
-          return ()=>document.body.removeChild(div);
-        }
+      },
+      hoverCallback(event, node) {
+        const rect = event.target.getBoundingClientRect();
+        const div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.left = rect.right + 'px';
+        div.style.top = rect.bottom + 'px';
+        div.style.width = '320px';
+        div.style.height = '200px';
+        div.style.border = '1px solid gray';
+        div.style.zIndex = '9';
+        div.style.background = '#fff';
+        div.innerHTML = `
+        <div>
+          <h3>悬浮时自定义渲染一个弹层</h3>
+          <h4>${node.data.bizData.title}</h4>
+          <p>${node.data.bizData.desc||''}</p>
+        </div>`;
+        document.body.append(div);
+        return ()=>document.body.removeChild(div);
       }
     },
     {
